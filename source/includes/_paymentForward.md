@@ -1,7 +1,7 @@
 # Payment Forward APIs
 
 The set of APIs allows you to crate and manage payment forward rules.
-Payment forward allows you to forward DASH received on one address to one or two new addresses.
+Payment forward allows you to forward BTC received on one address to one or two new addresses.
 In order to create a payment forward partially populated PaymentForward object is used.
 
 Once created, payment forward rule will continue to forward payments in a predefined way set during payment forward creation until you explicitly delete it by calling the API for payment forward delete.
@@ -16,11 +16,11 @@ Once created, payment forward rule will continue to forward payments in a predef
 
 |Parameter|In|Type|Required|Description|
 |---|---|---|---|---|
-|destination_address|body|String|True|Destination address represents the address to which received DASH will be forwarded.|
-|commission_address|body|String|False|Commission address is an optional address to which funds will be forwarded in a predefined way. If commission address is specified, one must specify either commission_fee_percent or commission_fee_duffs parameter (cannot use both for the same payment forward)|
+|destination_address|body|String|True|Destination address represents the address to which received BTC will be forwarded.|
+|commission_address|body|String|False|Commission address is an optional address to which funds will be forwarded in a predefined way. If commission address is specified, one must specify either commission_fee_percent or commission_fee_satoshis parameter (cannot use both for the same payment forward)|
 |commission_fee_percent|body|Float|False|Commission fee as normalized percentage. Minimum is 0.001. Maximum is 0.999. In case commission_address is set, commission_fee_percent specifies amount which will be forwarded to commission_address as percentage of the total received payment. The rest of the funds will be forwarded to destination_address. Mining fee is subtracted from previously calculated commission amount.|
-|commission_fee_duffs|body|Integer|False|Commission fee in duffs. In case commission_address is set, commission_fee_duffs specifies fixed amount of the total received payment which will be forwarded to commission_address. The rest of the funds will be forwarded to destination_address.|
-|mining_fee_duffs|body|String|False|Mining fee for forwarding transaction. Default fee is 10 000 duffs. Min 10 000 duffs. Max 150 000 duffs.|
+|commission_fee_satoshis|body|Integer|False|Commission fee in satoshis. In case commission_address is set, commission_fee_satoshis specifies fixed amount of the total received payment which will be forwarded to commission_address. The rest of the funds will be forwarded to destination_address.|
+|mining_fee_satoshis|body|String|False|Mining fee for forwarding transaction. Default fee is 10 000 satoshis. Min 10 000 satoshis. Max 150 000 satoshis.|
 |callback_url|body|String|False|URL to which the notification will be posted upon each successful payment forward.|
 |token|body|String|True|Token obtained from the ChainRider service|
 
@@ -160,12 +160,12 @@ System.out.println(result);
 
 ```json
 {
-    "paymentforward_id":"2pRxUXWLXQlwABUUPmuo9xi1Ghaqa0Lj",
-    "payment_address":"XhhqcCVhSmkETV6Q55RFskgASyUd9Seuwv",
-    "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-    "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-    "commission_fee_percent":0.1,
-    "mining_fee_duffs":10000
+    "paymentforward_id": "CaVLNtcPuwN3uzGBYtQSSv7BEQJfT2jM",
+    "payment_address": "mqiA4G8P5Gb2vfGutN97kJc36vSLWJYJrg",
+    "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+    "commission_address": "2MuWUMWnWakRS59RrCHaY18hwjEj9RBaeuw",
+    "commission_fee_percent": 0.1,
+    "mining_fee_satoshis": 10000
 }
 ```
 
@@ -202,24 +202,16 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/payment
 
 # Response example
 {
-    "paymentforward_id":"XozC3GyOfhEGwD6zK8rIvi0HU6ZwqAuU",
-    "payment_address":"XcyXgQzCnKsWpK2YSjoRYwM1vWB6GvWQ2u",
-    "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-    "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-    "commission_fee_percent":0.1,
-    "commission_fee_duffs":null,
-    "created_date":"2018-04-13T11:01:46.000Z",
-    "callback_url":"https://webhook.site/175c954d-6595-4bf8-a518-990f5e876fa7",
-    "mining_fee_duffs":10000,
-    "processed_txs":
-    [
-        {
-            "input_transaction_hash":"6e3648463d26ee5af215fa3b61e976bf06cc7b1c6d2c034253967be65fc1c889",
-            "received_amount_duffs":5000000,
-            "transaction_hash":"7c89d485e06f295de6fb1d676311340be35148dfc1a54de13b57e785227da78f",
-            "processed_date":"2018-04-13T11:04:19.000Z"
-        }
-    ]
+    "paymentforward_id": "4jCHkdLxUeVZqpadx1zzwUizTy77YPmh",
+    "payment_address": "mkGPLchVx2StU42pkXrFqhmSq7Vbur5GrW",
+    "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+    "commission_address": null,
+    "commission_fee_percent": null,
+    "commission_fee_satoshis": null,
+    "created_date": "2018-06-27T09:48:52.000Z",
+    "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+    "mining_fee_satoshis": 15000,
+    "processed_txs": []
 }
 ```
 
@@ -237,24 +229,16 @@ $response = file_get_contents($URL, false, $context);
 
 // Response example
 {
-    "paymentforward_id":"XozC3GyOfhEGwD6zK8rIvi0HU6ZwqAuU",
-    "payment_address":"XcyXgQzCnKsWpK2YSjoRYwM1vWB6GvWQ2u",
-    "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-    "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-    "commission_fee_percent":0.1,
-    "commission_fee_duffs":null,
-    "created_date":"2018-04-13T11:01:46.000Z",
-    "callback_url":"https://webhook.site/175c954d-6595-4bf8-a518-990f5e876fa7",
-    "mining_fee_duffs":10000,
-    "processed_txs":
-    [
-        {
-            "input_transaction_hash":"6e3648463d26ee5af215fa3b61e976bf06cc7b1c6d2c034253967be65fc1c889",
-            "received_amount_duffs":5000000,
-            "transaction_hash":"7c89d485e06f295de6fb1d676311340be35148dfc1a54de13b57e785227da78f",
-            "processed_date":"2018-04-13T11:04:19.000Z"
-        }
-    ]
+    "paymentforward_id": "4jCHkdLxUeVZqpadx1zzwUizTy77YPmh",
+    "payment_address": "mkGPLchVx2StU42pkXrFqhmSq7Vbur5GrW",
+    "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+    "commission_address": null,
+    "commission_fee_percent": null,
+    "commission_fee_satoshis": null,
+    "created_date": "2018-06-27T09:48:52.000Z",
+    "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+    "mining_fee_satoshis": 15000,
+    "processed_txs": []
 }
 ?>
 ```
@@ -276,24 +260,16 @@ $.ajax({
 
 // Response example
 {
-    "paymentforward_id":"XozC3GyOfhEGwD6zK8rIvi0HU6ZwqAuU",
-    "payment_address":"XcyXgQzCnKsWpK2YSjoRYwM1vWB6GvWQ2u",
-    "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-    "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-    "commission_fee_percent":0.1,
-    "commission_fee_duffs":null,
-    "created_date":"2018-04-13T11:01:46.000Z",
-    "callback_url":"https://webhook.site/175c954d-6595-4bf8-a518-990f5e876fa7",
-    "mining_fee_duffs":10000,
-    "processed_txs":
-    [
-        {
-            "input_transaction_hash":"6e3648463d26ee5af215fa3b61e976bf06cc7b1c6d2c034253967be65fc1c889",
-            "received_amount_duffs":5000000,
-            "transaction_hash":"7c89d485e06f295de6fb1d676311340be35148dfc1a54de13b57e785227da78f",
-            "processed_date":"2018-04-13T11:04:19.000Z"
-        }
-    ]
+    "paymentforward_id": "4jCHkdLxUeVZqpadx1zzwUizTy77YPmh",
+    "payment_address": "mkGPLchVx2StU42pkXrFqhmSq7Vbur5GrW",
+    "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+    "commission_address": null,
+    "commission_fee_percent": null,
+    "commission_fee_satoshis": null,
+    "created_date": "2018-06-27T09:48:52.000Z",
+    "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+    "mining_fee_satoshis": 15000,
+    "processed_txs": []
 }
 ```
 
@@ -313,24 +289,16 @@ p JSON.parse(result)
 
 # Response example
 {
-    "paymentforward_id":"XozC3GyOfhEGwD6zK8rIvi0HU6ZwqAuU",
-    "payment_address":"XcyXgQzCnKsWpK2YSjoRYwM1vWB6GvWQ2u",
-    "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-    "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-    "commission_fee_percent":0.1,
-    "commission_fee_duffs":null,
-    "created_date":"2018-04-13T11:01:46.000Z",
-    "callback_url":"https://webhook.site/175c954d-6595-4bf8-a518-990f5e876fa7",
-    "mining_fee_duffs":10000,
-    "processed_txs":
-    [
-        {
-            "input_transaction_hash":"6e3648463d26ee5af215fa3b61e976bf06cc7b1c6d2c034253967be65fc1c889",
-            "received_amount_duffs":5000000,
-            "transaction_hash":"7c89d485e06f295de6fb1d676311340be35148dfc1a54de13b57e785227da78f",
-            "processed_date":"2018-04-13T11:04:19.000Z"
-        }
-    ]
+    "paymentforward_id": "4jCHkdLxUeVZqpadx1zzwUizTy77YPmh",
+    "payment_address": "mkGPLchVx2StU42pkXrFqhmSq7Vbur5GrW",
+    "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+    "commission_address": null,
+    "commission_fee_percent": null,
+    "commission_fee_satoshis": null,
+    "created_date": "2018-06-27T09:48:52.000Z",
+    "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+    "mining_fee_satoshis": 15000,
+    "processed_txs": []
 }
 ```
 
@@ -349,24 +317,16 @@ print r.json()
 
 # Response example
 {
-    "paymentforward_id":"XozC3GyOfhEGwD6zK8rIvi0HU6ZwqAuU",
-    "payment_address":"XcyXgQzCnKsWpK2YSjoRYwM1vWB6GvWQ2u",
-    "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-    "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-    "commission_fee_percent":0.1,
-    "commission_fee_duffs":null,
-    "created_date":"2018-04-13T11:01:46.000Z",
-    "callback_url":"https://webhook.site/175c954d-6595-4bf8-a518-990f5e876fa7",
-    "mining_fee_duffs":10000,
-    "processed_txs":
-    [
-        {
-            "input_transaction_hash":"6e3648463d26ee5af215fa3b61e976bf06cc7b1c6d2c034253967be65fc1c889",
-            "received_amount_duffs":5000000,
-            "transaction_hash":"7c89d485e06f295de6fb1d676311340be35148dfc1a54de13b57e785227da78f",
-            "processed_date":"2018-04-13T11:04:19.000Z"
-        }
-    ]
+    "paymentforward_id": "4jCHkdLxUeVZqpadx1zzwUizTy77YPmh",
+    "payment_address": "mkGPLchVx2StU42pkXrFqhmSq7Vbur5GrW",
+    "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+    "commission_address": null,
+    "commission_fee_percent": null,
+    "commission_fee_satoshis": null,
+    "created_date": "2018-06-27T09:48:52.000Z",
+    "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+    "mining_fee_satoshis": 15000,
+    "processed_txs": []
 }
 ```
 
@@ -389,24 +349,16 @@ System.out.println(response.toString());
 
 // Response example
 {
-    "paymentforward_id":"XozC3GyOfhEGwD6zK8rIvi0HU6ZwqAuU",
-    "payment_address":"XcyXgQzCnKsWpK2YSjoRYwM1vWB6GvWQ2u",
-    "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-    "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-    "commission_fee_percent":0.1,
-    "commission_fee_duffs":null,
-    "created_date":"2018-04-13T11:01:46.000Z",
-    "callback_url":"https://webhook.site/175c954d-6595-4bf8-a518-990f5e876fa7",
-    "mining_fee_duffs":10000,
-    "processed_txs":
-    [
-        {
-            "input_transaction_hash":"6e3648463d26ee5af215fa3b61e976bf06cc7b1c6d2c034253967be65fc1c889",
-            "received_amount_duffs":5000000,
-            "transaction_hash":"7c89d485e06f295de6fb1d676311340be35148dfc1a54de13b57e785227da78f",
-            "processed_date":"2018-04-13T11:04:19.000Z"
-        }
-    ]
+    "paymentforward_id": "4jCHkdLxUeVZqpadx1zzwUizTy77YPmh",
+    "payment_address": "mkGPLchVx2StU42pkXrFqhmSq7Vbur5GrW",
+    "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+    "commission_address": null,
+    "commission_fee_percent": null,
+    "commission_fee_satoshis": null,
+    "created_date": "2018-06-27T09:48:52.000Z",
+    "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+    "mining_fee_satoshis": 15000,
+    "processed_txs": []
 }
 ```
 
@@ -445,26 +397,37 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/payment
 # Response example
 [
     {
-        "paymentforward_id":"bbM4nQ3fnAfI5VhJ9K8wWQQOx0Namr4l",
-        "payment_address":"XnRZrhsm5vWEitEqXAVGG1JTCeGBeJfj2d",
-        "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-        "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-        "commission_fee_percent":null,
-        "commission_fee_duffs":20000,
-        "created_date":"2018-04-12T12:10:56.000Z",
-        "callback_url":"http://blockchainvlf.requestcatcher.com/test",
-        "mining_fee_duffs":10000
+        "paymentforward_id": "4jCHkdLxUeVZqpadx1zzwUizTy77YPmh",
+        "payment_address": "mkGPLchVx2StU42pkXrFqhmSq7Vbur5GrW",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": null,
+        "commission_fee_percent": null,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:52.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 15000
     },
     {
-        "paymentforward_id":"fHKGPLDqWUlce0cQIPzROzexDZ9WwTlj",
-        "payment_address":"XfFckk6ky9WeuNuCqVNxgXuPUobjfeHGGu",
-        "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-        "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-        "commission_fee_percent":0.1,
-        "commission_fee_duffs":null,
-        "created_date":"2018-04-12T12:10:56.000Z",
-        "callback_url":"http://blockchainvlf.requestcatcher.com/test",
-        "mining_fee_duffs":10000
+        "paymentforward_id": "7yErUWUUUZBfGSWAKwj1KOrUjMNzHhxt",
+        "payment_address": "mjj56YktuK7MCMWXJknQnLoBKcjfq3KNUZ",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": null,
+        "commission_fee_percent": null,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:52.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 10000
+    },
+    {
+        "paymentforward_id": "DaVlc2g3zUFL3lLXQA0sKGK1tS0uawva",
+        "payment_address": "n2REXYnnsoUJw9xszR2Po2Ti8kmaEj4Cbh",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": "2MuWUMWnWakRS59RrCHaY18hwjEj9RBaeuw",
+        "commission_fee_percent": 0.1,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:53.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 10000
     }
 ]
 ```
@@ -484,26 +447,37 @@ $response = file_get_contents($URL, false, $context);
 // Response example
 [
     {
-        "paymentforward_id":"bbM4nQ3fnAfI5VhJ9K8wWQQOx0Namr4l",
-        "payment_address":"XnRZrhsm5vWEitEqXAVGG1JTCeGBeJfj2d",
-        "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-        "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-        "commission_fee_percent":null,
-        "commission_fee_duffs":20000,
-        "created_date":"2018-04-12T12:10:56.000Z",
-        "callback_url":"http://blockchainvlf.requestcatcher.com/test",
-        "mining_fee_duffs":10000
+        "paymentforward_id": "4jCHkdLxUeVZqpadx1zzwUizTy77YPmh",
+        "payment_address": "mkGPLchVx2StU42pkXrFqhmSq7Vbur5GrW",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": null,
+        "commission_fee_percent": null,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:52.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 15000
     },
     {
-        "paymentforward_id":"fHKGPLDqWUlce0cQIPzROzexDZ9WwTlj",
-        "payment_address":"XfFckk6ky9WeuNuCqVNxgXuPUobjfeHGGu",
-        "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-        "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-        "commission_fee_percent":0.1,
-        "commission_fee_duffs":null,
-        "created_date":"2018-04-12T12:10:56.000Z",
-        "callback_url":"http://blockchainvlf.requestcatcher.com/test",
-        "mining_fee_duffs":10000
+        "paymentforward_id": "7yErUWUUUZBfGSWAKwj1KOrUjMNzHhxt",
+        "payment_address": "mjj56YktuK7MCMWXJknQnLoBKcjfq3KNUZ",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": null,
+        "commission_fee_percent": null,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:52.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 10000
+    },
+    {
+        "paymentforward_id": "DaVlc2g3zUFL3lLXQA0sKGK1tS0uawva",
+        "payment_address": "n2REXYnnsoUJw9xszR2Po2Ti8kmaEj4Cbh",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": "2MuWUMWnWakRS59RrCHaY18hwjEj9RBaeuw",
+        "commission_fee_percent": 0.1,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:53.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 10000
     }
 ]
 ?>
@@ -527,26 +501,37 @@ $.ajax({
 // Response example
 [
     {
-        "paymentforward_id":"bbM4nQ3fnAfI5VhJ9K8wWQQOx0Namr4l",
-        "payment_address":"XnRZrhsm5vWEitEqXAVGG1JTCeGBeJfj2d",
-        "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-        "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-        "commission_fee_percent":null,
-        "commission_fee_duffs":20000,
-        "created_date":"2018-04-12T12:10:56.000Z",
-        "callback_url":"http://blockchainvlf.requestcatcher.com/test",
-        "mining_fee_duffs":10000
+        "paymentforward_id": "4jCHkdLxUeVZqpadx1zzwUizTy77YPmh",
+        "payment_address": "mkGPLchVx2StU42pkXrFqhmSq7Vbur5GrW",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": null,
+        "commission_fee_percent": null,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:52.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 15000
     },
     {
-        "paymentforward_id":"fHKGPLDqWUlce0cQIPzROzexDZ9WwTlj",
-        "payment_address":"XfFckk6ky9WeuNuCqVNxgXuPUobjfeHGGu",
-        "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-        "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-        "commission_fee_percent":0.1,
-        "commission_fee_duffs":null,
-        "created_date":"2018-04-12T12:10:56.000Z",
-        "callback_url":"http://blockchainvlf.requestcatcher.com/test",
-        "mining_fee_duffs":10000
+        "paymentforward_id": "7yErUWUUUZBfGSWAKwj1KOrUjMNzHhxt",
+        "payment_address": "mjj56YktuK7MCMWXJknQnLoBKcjfq3KNUZ",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": null,
+        "commission_fee_percent": null,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:52.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 10000
+    },
+    {
+        "paymentforward_id": "DaVlc2g3zUFL3lLXQA0sKGK1tS0uawva",
+        "payment_address": "n2REXYnnsoUJw9xszR2Po2Ti8kmaEj4Cbh",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": "2MuWUMWnWakRS59RrCHaY18hwjEj9RBaeuw",
+        "commission_fee_percent": 0.1,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:53.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 10000
     }
 ]
 ```
@@ -568,26 +553,37 @@ p JSON.parse(result)
 # Response example
 [
     {
-        "paymentforward_id":"bbM4nQ3fnAfI5VhJ9K8wWQQOx0Namr4l",
-        "payment_address":"XnRZrhsm5vWEitEqXAVGG1JTCeGBeJfj2d",
-        "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-        "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-        "commission_fee_percent":null,
-        "commission_fee_duffs":20000,
-        "created_date":"2018-04-12T12:10:56.000Z",
-        "callback_url":"http://blockchainvlf.requestcatcher.com/test",
-        "mining_fee_duffs":10000
+        "paymentforward_id": "4jCHkdLxUeVZqpadx1zzwUizTy77YPmh",
+        "payment_address": "mkGPLchVx2StU42pkXrFqhmSq7Vbur5GrW",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": null,
+        "commission_fee_percent": null,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:52.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 15000
     },
     {
-        "paymentforward_id":"fHKGPLDqWUlce0cQIPzROzexDZ9WwTlj",
-        "payment_address":"XfFckk6ky9WeuNuCqVNxgXuPUobjfeHGGu",
-        "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-        "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-        "commission_fee_percent":0.1,
-        "commission_fee_duffs":null,
-        "created_date":"2018-04-12T12:10:56.000Z",
-        "callback_url":"http://blockchainvlf.requestcatcher.com/test",
-        "mining_fee_duffs":10000
+        "paymentforward_id": "7yErUWUUUZBfGSWAKwj1KOrUjMNzHhxt",
+        "payment_address": "mjj56YktuK7MCMWXJknQnLoBKcjfq3KNUZ",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": null,
+        "commission_fee_percent": null,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:52.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 10000
+    },
+    {
+        "paymentforward_id": "DaVlc2g3zUFL3lLXQA0sKGK1tS0uawva",
+        "payment_address": "n2REXYnnsoUJw9xszR2Po2Ti8kmaEj4Cbh",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": "2MuWUMWnWakRS59RrCHaY18hwjEj9RBaeuw",
+        "commission_fee_percent": 0.1,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:53.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 10000
     }
 ]
 ```
@@ -608,26 +604,37 @@ print r.json()
 # Response example
 [
     {
-        "paymentforward_id":"bbM4nQ3fnAfI5VhJ9K8wWQQOx0Namr4l",
-        "payment_address":"XnRZrhsm5vWEitEqXAVGG1JTCeGBeJfj2d",
-        "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-        "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-        "commission_fee_percent":null,
-        "commission_fee_duffs":20000,
-        "created_date":"2018-04-12T12:10:56.000Z",
-        "callback_url":"http://blockchainvlf.requestcatcher.com/test",
-        "mining_fee_duffs":10000
+        "paymentforward_id": "4jCHkdLxUeVZqpadx1zzwUizTy77YPmh",
+        "payment_address": "mkGPLchVx2StU42pkXrFqhmSq7Vbur5GrW",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": null,
+        "commission_fee_percent": null,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:52.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 15000
     },
     {
-        "paymentforward_id":"fHKGPLDqWUlce0cQIPzROzexDZ9WwTlj",
-        "payment_address":"XfFckk6ky9WeuNuCqVNxgXuPUobjfeHGGu",
-        "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-        "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-        "commission_fee_percent":0.1,
-        "commission_fee_duffs":null,
-        "created_date":"2018-04-12T12:10:56.000Z",
-        "callback_url":"http://blockchainvlf.requestcatcher.com/test",
-        "mining_fee_duffs":10000
+        "paymentforward_id": "7yErUWUUUZBfGSWAKwj1KOrUjMNzHhxt",
+        "payment_address": "mjj56YktuK7MCMWXJknQnLoBKcjfq3KNUZ",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": null,
+        "commission_fee_percent": null,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:52.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 10000
+    },
+    {
+        "paymentforward_id": "DaVlc2g3zUFL3lLXQA0sKGK1tS0uawva",
+        "payment_address": "n2REXYnnsoUJw9xszR2Po2Ti8kmaEj4Cbh",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": "2MuWUMWnWakRS59RrCHaY18hwjEj9RBaeuw",
+        "commission_fee_percent": 0.1,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:53.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 10000
     }
 ]
 ```
@@ -652,26 +659,37 @@ System.out.println(response.toString());
 // Response example
 [
     {
-        "paymentforward_id":"bbM4nQ3fnAfI5VhJ9K8wWQQOx0Namr4l",
-        "payment_address":"XnRZrhsm5vWEitEqXAVGG1JTCeGBeJfj2d",
-        "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-        "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-        "commission_fee_percent":null,
-        "commission_fee_duffs":20000,
-        "created_date":"2018-04-12T12:10:56.000Z",
-        "callback_url":"http://blockchainvlf.requestcatcher.com/test",
-        "mining_fee_duffs":10000
+        "paymentforward_id": "4jCHkdLxUeVZqpadx1zzwUizTy77YPmh",
+        "payment_address": "mkGPLchVx2StU42pkXrFqhmSq7Vbur5GrW",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": null,
+        "commission_fee_percent": null,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:52.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 15000
     },
     {
-        "paymentforward_id":"fHKGPLDqWUlce0cQIPzROzexDZ9WwTlj",
-        "payment_address":"XfFckk6ky9WeuNuCqVNxgXuPUobjfeHGGu",
-        "destination_address":"XvtUXjA3UBnGvsbV7MDs4Duu411CfofDEK",
-        "commission_address":"XtFU7dFv8b7JeW7eG9yYXc28uSYUQqiNCb",
-        "commission_fee_percent":0.1,
-        "commission_fee_duffs":null,
-        "created_date":"2018-04-12T12:10:56.000Z",
-        "callback_url":"http://blockchainvlf.requestcatcher.com/test",
-        "mining_fee_duffs":10000
+        "paymentforward_id": "7yErUWUUUZBfGSWAKwj1KOrUjMNzHhxt",
+        "payment_address": "mjj56YktuK7MCMWXJknQnLoBKcjfq3KNUZ",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": null,
+        "commission_fee_percent": null,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:52.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 10000
+    },
+    {
+        "paymentforward_id": "DaVlc2g3zUFL3lLXQA0sKGK1tS0uawva",
+        "payment_address": "n2REXYnnsoUJw9xszR2Po2Ti8kmaEj4Cbh",
+        "destination_address": "2MxAS7QfBDQspHxmY4g4i92tLNTPH4r2DTZ",
+        "commission_address": "2MuWUMWnWakRS59RrCHaY18hwjEj9RBaeuw",
+        "commission_fee_percent": 0.1,
+        "commission_fee_satoshis": null,
+        "created_date": "2018-06-27T09:48:53.000Z",
+        "callback_url": "http://blockchainvlf.requestcatcher.com/test",
+        "mining_fee_satoshis": 10000
     }
 ]
 ```

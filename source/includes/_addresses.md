@@ -38,21 +38,19 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/addr/<A
 
 # Response example
 {
-    "addrStr":"XkLcLoji7FT8ALmpC3wCy6mTwPp3mMkonA",
-    "balance":0,
-    "balanceSat":0,
-    "totalReceived":43.39433988,
-    "totalReceivedSat":4339433988,
-    "totalSent":43.39433988,
-    "totalSentSat":4339433988,
-    "unconfirmedBalance":0,
-    "unconfirmedBalanceSat":0,
-    "unconfirmedTxApperances":0,
-    "txApperances":2,
-    "transactions":
-    [
-        "58987677dcf85dd7fb949da5d283abddb561f131dfc554d95fa193dfa2242382",
-        "62ffe74e1cbeb5f537830b199a7d0700cecd3ae5476ec0fbada12c5c1129fe66"
+    "addrStr": "2N5DTRzmxKiJC3uuo39kqXTxhuSJQpoB3y2",
+    "balance": 0.01,
+    "balanceSat": 1000000,
+    "totalReceived": 0.01,
+    "totalReceivedSat": 1000000,
+    "totalSent": 0,
+    "totalSentSat": 0,
+    "unconfirmedBalance": 0,
+    "unconfirmedBalanceSat": 0,
+    "unconfirmedTxApperances": 0,
+    "txApperances": 1,
+    "transactions": [
+        "8ac4006d584b3a5302811b454f04a965d617520d9edcd02f5fc5d5c2d181766d"
     ]
 }
 ```
@@ -71,21 +69,19 @@ $response = file_get_contents($URL, false, $context);
 
 // Response example
 {
-    "addrStr":"XkLcLoji7FT8ALmpC3wCy6mTwPp3mMkonA",
-    "balance":0,
-    "balanceSat":0,
-    "totalReceived":43.39433988,
-    "totalReceivedSat":4339433988,
-    "totalSent":43.39433988,
-    "totalSentSat":4339433988,
-    "unconfirmedBalance":0,
-    "unconfirmedBalanceSat":0,
-    "unconfirmedTxApperances":0,
-    "txApperances":2,
-    "transactions":
-    [
-        "58987677dcf85dd7fb949da5d283abddb561f131dfc554d95fa193dfa2242382",
-        "62ffe74e1cbeb5f537830b199a7d0700cecd3ae5476ec0fbada12c5c1129fe66"
+    "addrStr": "2N5DTRzmxKiJC3uuo39kqXTxhuSJQpoB3y2",
+    "balance": 0.01,
+    "balanceSat": 1000000,
+    "totalReceived": 0.01,
+    "totalReceivedSat": 1000000,
+    "totalSent": 0,
+    "totalSentSat": 0,
+    "unconfirmedBalance": 0,
+    "unconfirmedBalanceSat": 0,
+    "unconfirmedTxApperances": 0,
+    "txApperances": 1,
+    "transactions": [
+        "8ac4006d584b3a5302811b454f04a965d617520d9edcd02f5fc5d5c2d181766d"
     ]
 }
 ?>
@@ -108,21 +104,19 @@ $.ajax({
 
 // Response example
 {
-    "addrStr":"XkLcLoji7FT8ALmpC3wCy6mTwPp3mMkonA",
-    "balance":0,
-    "balanceSat":0,
-    "totalReceived":43.39433988,
-    "totalReceivedSat":4339433988,
-    "totalSent":43.39433988,
-    "totalSentSat":4339433988,
-    "unconfirmedBalance":0,
-    "unconfirmedBalanceSat":0,
-    "unconfirmedTxApperances":0,
-    "txApperances":2,
-    "transactions":
-    [
-        "58987677dcf85dd7fb949da5d283abddb561f131dfc554d95fa193dfa2242382",
-        "62ffe74e1cbeb5f537830b199a7d0700cecd3ae5476ec0fbada12c5c1129fe66"
+    "addrStr": "2N5DTRzmxKiJC3uuo39kqXTxhuSJQpoB3y2",
+    "balance": 0.01,
+    "balanceSat": 1000000,
+    "totalReceived": 0.01,
+    "totalReceivedSat": 1000000,
+    "totalSent": 0,
+    "totalSentSat": 0,
+    "unconfirmedBalance": 0,
+    "unconfirmedBalanceSat": 0,
+    "unconfirmedTxApperances": 0,
+    "txApperances": 1,
+    "transactions": [
+        "8ac4006d584b3a5302811b454f04a965d617520d9edcd02f5fc5d5c2d181766d"
     ]
 }
 ```
@@ -143,21 +137,19 @@ p JSON.parse(result)
 
 # Response example
 {
-    "addrStr":"XkLcLoji7FT8ALmpC3wCy6mTwPp3mMkonA",
-    "balance":0,
-    "balanceSat":0,
-    "totalReceived":43.39433988,
-    "totalReceivedSat":4339433988,
-    "totalSent":43.39433988,
-    "totalSentSat":4339433988,
-    "unconfirmedBalance":0,
-    "unconfirmedBalanceSat":0,
-    "unconfirmedTxApperances":0,
-    "txApperances":2,
-    "transactions":
-    [
-        "58987677dcf85dd7fb949da5d283abddb561f131dfc554d95fa193dfa2242382",
-        "62ffe74e1cbeb5f537830b199a7d0700cecd3ae5476ec0fbada12c5c1129fe66"
+    "addrStr": "2N5DTRzmxKiJC3uuo39kqXTxhuSJQpoB3y2",
+    "balance": 0.01,
+    "balanceSat": 1000000,
+    "totalReceived": 0.01,
+    "totalReceivedSat": 1000000,
+    "totalSent": 0,
+    "totalSentSat": 0,
+    "unconfirmedBalance": 0,
+    "unconfirmedBalanceSat": 0,
+    "unconfirmedTxApperances": 0,
+    "txApperances": 1,
+    "transactions": [
+        "8ac4006d584b3a5302811b454f04a965d617520d9edcd02f5fc5d5c2d181766d"
     ]
 }
 ```
@@ -177,21 +169,19 @@ print r.json()
 
 # Response example
 {
-    "addrStr":"XkLcLoji7FT8ALmpC3wCy6mTwPp3mMkonA",
-    "balance":0,
-    "balanceSat":0,
-    "totalReceived":43.39433988,
-    "totalReceivedSat":4339433988,
-    "totalSent":43.39433988,
-    "totalSentSat":4339433988,
-    "unconfirmedBalance":0,
-    "unconfirmedBalanceSat":0,
-    "unconfirmedTxApperances":0,
-    "txApperances":2,
-    "transactions":
-    [
-        "58987677dcf85dd7fb949da5d283abddb561f131dfc554d95fa193dfa2242382",
-        "62ffe74e1cbeb5f537830b199a7d0700cecd3ae5476ec0fbada12c5c1129fe66"
+    "addrStr": "2N5DTRzmxKiJC3uuo39kqXTxhuSJQpoB3y2",
+    "balance": 0.01,
+    "balanceSat": 1000000,
+    "totalReceived": 0.01,
+    "totalReceivedSat": 1000000,
+    "totalSent": 0,
+    "totalSentSat": 0,
+    "unconfirmedBalance": 0,
+    "unconfirmedBalanceSat": 0,
+    "unconfirmedTxApperances": 0,
+    "txApperances": 1,
+    "transactions": [
+        "8ac4006d584b3a5302811b454f04a965d617520d9edcd02f5fc5d5c2d181766d"
     ]
 }
 ```
@@ -215,21 +205,19 @@ System.out.println(response.toString());
 
 // Response example
 {
-    "addrStr":"XkLcLoji7FT8ALmpC3wCy6mTwPp3mMkonA",
-    "balance":0,
-    "balanceSat":0,
-    "totalReceived":43.39433988,
-    "totalReceivedSat":4339433988,
-    "totalSent":43.39433988,
-    "totalSentSat":4339433988,
-    "unconfirmedBalance":0,
-    "unconfirmedBalanceSat":0,
-    "unconfirmedTxApperances":0,
-    "txApperances":2,
-    "transactions":
-    [
-        "58987677dcf85dd7fb949da5d283abddb561f131dfc554d95fa193dfa2242382",
-        "62ffe74e1cbeb5f537830b199a7d0700cecd3ae5476ec0fbada12c5c1129fe66"
+    "addrStr": "2N5DTRzmxKiJC3uuo39kqXTxhuSJQpoB3y2",
+    "balance": 0.01,
+    "balanceSat": 1000000,
+    "totalReceived": 0.01,
+    "totalReceivedSat": 1000000,
+    "totalSent": 0,
+    "totalSentSat": 0,
+    "unconfirmedBalance": 0,
+    "unconfirmedBalanceSat": 0,
+    "unconfirmedTxApperances": 0,
+    "txApperances": 1,
+    "transactions": [
+        "8ac4006d584b3a5302811b454f04a965d617520d9edcd02f5fc5d5c2d181766d"
     ]
 }
 ```
@@ -300,7 +288,7 @@ $.ajax({
 });
 
 // Response example
-0
+1000000
 ```
 
 ```ruby
@@ -317,7 +305,7 @@ result = RestClient.get 'https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKC
 p JSON.parse(result)
 
 # Response example
-0
+1000000
 ```
 
 ```python
@@ -333,7 +321,7 @@ r = requests.get('https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/a
 print r.json()
 
 # Response example
-0
+1000000
 ```
 
 ```java
@@ -353,7 +341,7 @@ in.close();
 System.out.println(response.toString());
 
 // Response example
-0
+1000000
 ```
 
 ## Address Total Received
@@ -387,7 +375,7 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/addr/<A
   -H 'Content-Type: application/json'
 
 # Response example
-4339433988
+1000000
 ```
 
 ```php
@@ -403,7 +391,7 @@ $context = stream_context_create($aHTTP);
 $response = file_get_contents($URL, false, $context);
 
 // Response example
-4339433988
+1000000
 ?>
 ```
 
@@ -422,7 +410,7 @@ $.ajax({
 });
 
 // Response example
-4339433988
+1000000
 ```
 
 ```ruby
@@ -439,7 +427,7 @@ result = RestClient.get 'https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKC
 p JSON.parse(result)
 
 # Response example
-4339433988
+1000000
 ```
 
 ```python
@@ -455,7 +443,7 @@ r = requests.get('https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/a
 print r.json()
 
 # Response example
-4339433988
+1000000
 ```
 
 ```java
@@ -475,7 +463,7 @@ in.close();
 System.out.println(response.toString());
 
 // Response example
-4339433988
+1000000
 ```
 
 ## Address Total Sent
@@ -509,7 +497,7 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/addr/<A
   -H 'Content-Type: application/json'
 
 # Response example
-4339433988
+0
 ```
 
 ```php
@@ -525,7 +513,7 @@ $context = stream_context_create($aHTTP);
 $response = file_get_contents($URL, false, $context);
 
 // Response example
-4339433988
+0
 ?>
 ```
 
@@ -544,7 +532,7 @@ $.ajax({
 });
 
 // Response example
-4339433988
+0
 ```
 
 ```ruby
@@ -561,7 +549,7 @@ result = RestClient.get 'https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKC
 p JSON.parse(result)
 
 # Response example
-4339433988
+0
 ```
 
 ```python
@@ -577,7 +565,7 @@ r = requests.get('https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/a
 print r.json()
 
 # Response example
-4339433988
+0
 ```
 
 ```java
@@ -597,7 +585,7 @@ in.close();
 System.out.println(response.toString());
 
 // Response example
-4339433988
+0
 ```
 
 ## Address Unconfirmed Balance

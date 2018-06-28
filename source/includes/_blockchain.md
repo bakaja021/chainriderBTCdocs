@@ -41,11 +41,11 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/status?
         "version":120203,
         "insightversion":"0.6.0",
         "protocolversion":70208,
-        "blocks":855511,
+        "blocks":894442,
         "timeoffset":0,
         "connections":8,
         "proxy":"",
-        "difficulty":41610185.00844856,
+        "difficulty":91708039.52534924,
         "testnet":false,
         "relayfee":0.00001,
         "errors":"",
@@ -73,11 +73,11 @@ $response = file_get_contents($URL, false, $context);
         "version":120203,
         "insightversion":"0.6.0",
         "protocolversion":70208,
-        "blocks":855511,
+        "blocks":894442,
         "timeoffset":0,
         "connections":8,
         "proxy":"",
-        "difficulty":41610185.00844856,
+        "difficulty":91708039.52534924,
         "testnet":false,
         "relayfee":0.00001,
         "errors":"",
@@ -109,11 +109,11 @@ $.ajax({
         "version":120203,
         "insightversion":"0.6.0",
         "protocolversion":70208,
-        "blocks":855511,
+        "blocks":894442,
         "timeoffset":0,
         "connections":8,
         "proxy":"",
-        "difficulty":41610185.00844856,
+        "difficulty":91708039.52534924,
         "testnet":false,
         "relayfee":0.00001,
         "errors":"",
@@ -143,11 +143,11 @@ p JSON.parse(result)
         "version":120203,
         "insightversion":"0.6.0",
         "protocolversion":70208,
-        "blocks":855511,
+        "blocks":894442,
         "timeoffset":0,
         "connections":8,
         "proxy":"",
-        "difficulty":41610185.00844856,
+        "difficulty":91708039.52534924,
         "testnet":false,
         "relayfee":0.00001,
         "errors":"",
@@ -176,11 +176,11 @@ print r.json()
         "version":120203,
         "insightversion":"0.6.0",
         "protocolversion":70208,
-        "blocks":855511,
+        "blocks":894442,
         "timeoffset":0,
         "connections":8,
         "proxy":"",
-        "difficulty":41610185.00844856,
+        "difficulty":91708039.52534924,
         "testnet":false,
         "relayfee":0.00001,
         "errors":"",
@@ -213,11 +213,11 @@ System.out.println(response.toString());
         "version":120203,
         "insightversion":"0.6.0",
         "protocolversion":70208,
-        "blocks":855511,
+        "blocks":894442,
         "timeoffset":0,
         "connections":8,
         "proxy":"",
-        "difficulty":41610185.00844856,
+        "difficulty":91708039.52534924,
         "testnet":false,
         "relayfee":0.00001,
         "errors":"",
@@ -260,7 +260,7 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/status?
 
 # Response example
 {
-    "difficulty": 41610185.00844856
+    "difficulty":91708039.52534924
 }
 ```
 
@@ -278,7 +278,7 @@ $response = file_get_contents($URL, false, $context);
 
 // Response example
 {
-    "difficulty": 41610185.00844856
+    "difficulty":91708039.52534924
 }
 ?>
 ```
@@ -300,7 +300,7 @@ $.ajax({
 
 // Response example
 {
-    "difficulty": 41610185.00844856
+    "difficulty":91708039.52534924
 }
 ```
 
@@ -320,7 +320,7 @@ p JSON.parse(result)
 
 # Response example
 {
-    "difficulty": 41610185.00844856
+    "difficulty":91708039.52534924
 }
 ```
 
@@ -339,7 +339,7 @@ print r.json()
 
 # Response example
 {
-    "difficulty": 41610185.00844856
+    "difficulty":91708039.52534924
 }
 ```
 
@@ -362,7 +362,7 @@ System.out.println(response.toString());
 
 // Response example
 {
-    "difficulty": 41610185.00844856
+    "difficulty":91708039.52534924
 }
 ```
 
@@ -399,7 +399,7 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/status?
 
 # Response example
 {
-    "bestblockhash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5"
+    "bestblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
 }
 ```
 
@@ -417,7 +417,7 @@ $response = file_get_contents($URL, false, $context);
 
 // Response example
 {
-    "bestblockhash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5"
+    "bestblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
 }
 ?>
 ```
@@ -439,7 +439,7 @@ $.ajax({
 
 // Response example
 {
-    "bestblockhash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5"
+    "bestblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
 }
 ```
 
@@ -459,7 +459,7 @@ p JSON.parse(result)
 
 # Response example
 {
-    "bestblockhash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5"
+    "bestblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
 }
 ```
 
@@ -478,7 +478,7 @@ print r.json()
 
 # Response example
 {
-    "bestblockhash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5"
+    "bestblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
 }
 ```
 
@@ -501,7 +501,7 @@ System.out.println(response.toString());
 
 // Response example
 {
-    "bestblockhash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5"
+    "bestblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
 }
 ```
 
@@ -538,8 +538,8 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/status?
 
 # Response example
 {
-    "syncTipHash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5",
-    "lastblockhash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5"
+    "syncTipHash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595",
+    "lastblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
 }
 ```
 
@@ -557,8 +557,8 @@ $response = file_get_contents($URL, false, $context);
 
 // Response example
 {
-    "syncTipHash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5",
-    "lastblockhash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5"
+    "syncTipHash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595",
+    "lastblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
 }
 ?>
 ```
@@ -580,8 +580,8 @@ $.ajax({
 
 // Response example
 {
-    "syncTipHash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5",
-    "lastblockhash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5"
+    "syncTipHash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595",
+    "lastblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
 }
 ```
 
@@ -601,8 +601,8 @@ p JSON.parse(result)
 
 # Response example
 {
-    "syncTipHash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5",
-    "lastblockhash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5"
+    "syncTipHash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595",
+    "lastblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
 }
 ```
 
@@ -621,8 +621,8 @@ print r.json()
 
 # Response example
 {
-    "syncTipHash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5",
-    "lastblockhash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5"
+    "syncTipHash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595",
+    "lastblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
 }
 ```
 
@@ -645,8 +645,8 @@ System.out.println(response.toString());
 
 // Response example
 {
-    "syncTipHash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5",
-    "lastblockhash":"000000000000005d1718d7539c0a5313b7660b8e7c66d1dccc263a225f9848f5"
+    "syncTipHash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595",
+    "lastblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
 }
 ```
 
@@ -683,9 +683,9 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/sync?to
 # Response example
 {
     "status":"finished",
-    "blockChainHeight":855511,
+    "blockChainHeight":894442,
     "syncPercentage":100,
-    "height":855511,
+    "height":894442,
     "error":null,
     "type":"bitcore node"
 }
@@ -706,9 +706,9 @@ $response = file_get_contents($URL, false, $context);
 // Response example
 {
     "status":"finished",
-    "blockChainHeight":855511,
+    "blockChainHeight":894442,
     "syncPercentage":100,
-    "height":855511,
+    "height":894442,
     "error":null,
     "type":"bitcore node"
 }
@@ -733,9 +733,9 @@ $.ajax({
 // Response example
 {
     "status":"finished",
-    "blockChainHeight":855511,
+    "blockChainHeight":894442,
     "syncPercentage":100,
-    "height":855511,
+    "height":894442,
     "error":null,
     "type":"bitcore node"
 }
@@ -758,9 +758,9 @@ p JSON.parse(result)
 # Response example
 {
     "status":"finished",
-    "blockChainHeight":855511,
+    "blockChainHeight":894442,
     "syncPercentage":100,
-    "height":855511,
+    "height":894442,
     "error":null,
     "type":"bitcore node"
 }
@@ -782,9 +782,9 @@ print r.json()
 # Response example
 {
     "status":"finished",
-    "blockChainHeight":855511,
+    "blockChainHeight":894442,
     "syncPercentage":100,
-    "height":855511,
+    "height":894442,
     "error":null,
     "type":"bitcore node"
 }
@@ -810,743 +810,10 @@ System.out.println(response.toString());
 // Response example
 {
     "status":"finished",
-    "blockChainHeight":855511,
+    "blockChainHeight":894442,
     "syncPercentage":100,
-    "height":855511,
+    "height":894442,
     "error":null,
     "type":"bitcore node"
 }
-```
-
-## Budget Proposals
-
-<h3 id="getBudgetProposals">GET /listproposal</h3>
-
-<a id="opIdGetBudgetProposals"></a>
-
-*List budget proposals for a blockchain*
-
-|Parameter|In|Type|Required|Description|
-|---|---|---|---|---|
-|token|query|String|True|Token obtained from the ChainRider service|
-
-<h3 id="response">Response</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|Array [BlockchainProposalsObject](#schemeblockchainproposalsobject)|
-|401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
-|403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|Forbidden|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<a id="divider"></a>
-
-> Code samples
-
-```shell
-curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/listproposal?token=<TOKEN> \
-  -H 'Content-Type: application/json' \
-  -H 'Accept: application/json'
-
-# Response example
-[
-    {
-        "Hash":"83b86bb19438144468576a257e312e5e674e778a47990c6af6338a3f92536302",
-        "DataObject":
-        {
-            "end_epoch":1526652235,
-            "name":"DASH-Venezuela-13-cities-1600-people",
-            "payment_address":"Xfm6qvS2ugxL9u1V64SQeqbztYjqNU1qqx",
-            "payment_amount":337,
-            "start_epoch":1524076755,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DASH-Venezuela-13-cities-1600-people"
-        },
-        "AbsoluteYesCount":69,
-        "YesCount":88,
-        "NoCount":19,
-        "AbstainCount":0
-    },
-    {
-        "Hash":"9de1ad25b9e5e329ff53fc7fc5a2dadb817d1b84bf4578b152f91b931fde9208",
-        "DataObject":
-        {
-            "end_epoch":1518714343,
-            "name":"DashRed-Dec2017-Feb2018",
-            "payment_address":"XxJLNc5eharc5BtKLTCrZGTXhQaUiQzDws",
-            "payment_amount":36,
-            "start_epoch":1510987903,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DashRed-Dec2017-Feb2018"
-        },
-        "AbsoluteYesCount":250,
-        "YesCount":318,
-        "NoCount":68,
-        "AbstainCount":15
-    }
-]
-```
-
-```php
-<?php
-$URL = "https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/listproposal?token=<TOKEN>";
-
-$aHTTP['http']['method']  = 'GET';
-
-$aHTTP['http']['header']  = "Content-Type: application/json\r\nAccept: application/json\r\n";
-
-$context = stream_context_create($aHTTP);
-
-$response = file_get_contents($URL, false, $context);
-
-// Response example
-[
-    {
-        "Hash":"83b86bb19438144468576a257e312e5e674e778a47990c6af6338a3f92536302",
-        "DataObject":
-        {
-            "end_epoch":1526652235,
-            "name":"DASH-Venezuela-13-cities-1600-people",
-            "payment_address":"Xfm6qvS2ugxL9u1V64SQeqbztYjqNU1qqx",
-            "payment_amount":337,
-            "start_epoch":1524076755,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DASH-Venezuela-13-cities-1600-people"
-        },
-        "AbsoluteYesCount":69,
-        "YesCount":88,
-        "NoCount":19,
-        "AbstainCount":0
-    },
-    {
-        "Hash":"9de1ad25b9e5e329ff53fc7fc5a2dadb817d1b84bf4578b152f91b931fde9208",
-        "DataObject":
-        {
-            "end_epoch":1518714343,
-            "name":"DashRed-Dec2017-Feb2018",
-            "payment_address":"XxJLNc5eharc5BtKLTCrZGTXhQaUiQzDws",
-            "payment_amount":36,
-            "start_epoch":1510987903,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DashRed-Dec2017-Feb2018"
-        },
-        "AbsoluteYesCount":250,
-        "YesCount":318,
-        "NoCount":68,
-        "AbstainCount":15
-    }
-]
-?>
-```
-
-```javascript
-var headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json'
-};
-
-$.ajax({
-  url: 'https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/listproposal?token=<TOKEN>',
-  method: 'get',
-  headers: headers,
-  success: function(data) {
-    console.log(JSON.stringify(data));
-  }
-});
-
-// Response example
-[
-    {
-        "Hash":"83b86bb19438144468576a257e312e5e674e778a47990c6af6338a3f92536302",
-        "DataObject":
-        {
-            "end_epoch":1526652235,
-            "name":"DASH-Venezuela-13-cities-1600-people",
-            "payment_address":"Xfm6qvS2ugxL9u1V64SQeqbztYjqNU1qqx",
-            "payment_amount":337,
-            "start_epoch":1524076755,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DASH-Venezuela-13-cities-1600-people"
-        },
-        "AbsoluteYesCount":69,
-        "YesCount":88,
-        "NoCount":19,
-        "AbstainCount":0
-    },
-    {
-        "Hash":"9de1ad25b9e5e329ff53fc7fc5a2dadb817d1b84bf4578b152f91b931fde9208",
-        "DataObject":
-        {
-            "end_epoch":1518714343,
-            "name":"DashRed-Dec2017-Feb2018",
-            "payment_address":"XxJLNc5eharc5BtKLTCrZGTXhQaUiQzDws",
-            "payment_amount":36,
-            "start_epoch":1510987903,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DashRed-Dec2017-Feb2018"
-        },
-        "AbsoluteYesCount":250,
-        "YesCount":318,
-        "NoCount":68,
-        "AbstainCount":15
-    }
-]
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json'
-}
-
-result = RestClient.get 'https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/listproposal',
-         params: {'token': <TOKEN>}, headers: headers
-
-p JSON.parse(result)
-
-# Response example
-[
-    {
-        "Hash":"83b86bb19438144468576a257e312e5e674e778a47990c6af6338a3f92536302",
-        "DataObject":
-        {
-            "end_epoch":1526652235,
-            "name":"DASH-Venezuela-13-cities-1600-people",
-            "payment_address":"Xfm6qvS2ugxL9u1V64SQeqbztYjqNU1qqx",
-            "payment_amount":337,
-            "start_epoch":1524076755,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DASH-Venezuela-13-cities-1600-people"
-        },
-        "AbsoluteYesCount":69,
-        "YesCount":88,
-        "NoCount":19,
-        "AbstainCount":0
-    },
-    {
-        "Hash":"9de1ad25b9e5e329ff53fc7fc5a2dadb817d1b84bf4578b152f91b931fde9208",
-        "DataObject":
-        {
-            "end_epoch":1518714343,
-            "name":"DashRed-Dec2017-Feb2018",
-            "payment_address":"XxJLNc5eharc5BtKLTCrZGTXhQaUiQzDws",
-            "payment_amount":36,
-            "start_epoch":1510987903,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DashRed-Dec2017-Feb2018"
-        },
-        "AbsoluteYesCount":250,
-        "YesCount":318,
-        "NoCount":68,
-        "AbstainCount":15
-    }
-]
-```
-
-```python
-import requests
-
-headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-}
-
-r = requests.get('https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/listproposal',
-                  params={'token': <TOKEN>}, headers = headers)
-
-print r.json()
-
-# Response example
-[
-    {
-        "Hash":"83b86bb19438144468576a257e312e5e674e778a47990c6af6338a3f92536302",
-        "DataObject":
-        {
-            "end_epoch":1526652235,
-            "name":"DASH-Venezuela-13-cities-1600-people",
-            "payment_address":"Xfm6qvS2ugxL9u1V64SQeqbztYjqNU1qqx",
-            "payment_amount":337,
-            "start_epoch":1524076755,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DASH-Venezuela-13-cities-1600-people"
-        },
-        "AbsoluteYesCount":69,
-        "YesCount":88,
-        "NoCount":19,
-        "AbstainCount":0
-    },
-    {
-        "Hash":"9de1ad25b9e5e329ff53fc7fc5a2dadb817d1b84bf4578b152f91b931fde9208",
-        "DataObject":
-        {
-            "end_epoch":1518714343,
-            "name":"DashRed-Dec2017-Feb2018",
-            "payment_address":"XxJLNc5eharc5BtKLTCrZGTXhQaUiQzDws",
-            "payment_amount":36,
-            "start_epoch":1510987903,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DashRed-Dec2017-Feb2018"
-        },
-        "AbsoluteYesCount":250,
-        "YesCount":318,
-        "NoCount":68,
-        "AbstainCount":15
-    }
-]
-```
-
-```java
-URL obj = new URL("https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/listproposal?token=<TOKEN>");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestProperty("Accept", "application/json");
-con.setRequestProperty("Content-Type", "application/json");
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-
-// Response example
-[
-    {
-        "Hash":"83b86bb19438144468576a257e312e5e674e778a47990c6af6338a3f92536302",
-        "DataObject":
-        {
-            "end_epoch":1526652235,
-            "name":"DASH-Venezuela-13-cities-1600-people",
-            "payment_address":"Xfm6qvS2ugxL9u1V64SQeqbztYjqNU1qqx",
-            "payment_amount":337,
-            "start_epoch":1524076755,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DASH-Venezuela-13-cities-1600-people"
-        },
-        "AbsoluteYesCount":69,
-        "YesCount":88,
-        "NoCount":19,
-        "AbstainCount":0
-    },
-    {
-        "Hash":"9de1ad25b9e5e329ff53fc7fc5a2dadb817d1b84bf4578b152f91b931fde9208",
-        "DataObject":
-        {
-            "end_epoch":1518714343,
-            "name":"DashRed-Dec2017-Feb2018",
-            "payment_address":"XxJLNc5eharc5BtKLTCrZGTXhQaUiQzDws",
-            "payment_amount":36,
-            "start_epoch":1510987903,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DashRed-Dec2017-Feb2018"
-        },
-        "AbsoluteYesCount":250,
-        "YesCount":318,
-        "NoCount":68,
-        "AbstainCount":15
-    }
-]
-```
-
-## Budget Proposal by hash
-
-<h3 id="getBudgetProposal">GET /getproposal/< proposal_hash > </h3>
-
-<a id="opIdGetBudgetProposal"></a>
-
-*Get budget proposal by proposal hash for a blockchain*
-
-|Parameter|In|Type|Required|Description|
-|---|---|---|---|---|
-|proposal_hash|path|String|True|Hash of the proposal|
-|token|query|String|True|Token obtained from the ChainRider service|
-
-<h3 id="response">Response</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|[BlockchainProposalObject](#schemeblockchainproposalobject)|
-|401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
-|403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|Forbidden|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<a id="divider"></a>
-
-> Code samples
-
-```shell
-curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/getproposal/<PROPOSAL_HASH>?token=<TOKEN> \
-  -H 'Content-Type: application/json' \
-  -H 'Accept: application/json'
-
-# Response example
-[
-    {
-        "Hash":"83b86bb19438144468576a257e312e5e674e778a47990c6af6338a3f92536302",
-        "CollateralHash":"329f3802ebdad3088668f837ad74ab22e8853c03bf2ed15440d4108115d531b8",
-        "DataHex":"5b5b2270726f706f73616c222c7b22656e645f65706f6368223a313532363635323233352c226e616d65223a22444153482d56656e657a75656c612d31332d6369746965732d313630302d70656f706c65222c227061796d656e745f61646472657373223a2258666d36717653327567784c39753156363453516571627a74596a714e5531717178222c227061796d656e745f616d6f756e74223a3333372c2273746172745f65706f6368223a313532343037363735352c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472616c2e6f72672f702f444153482d56656e657a75656c612d31332d6369746965732d313630302d70656f706c65227d5d5d",
-        "DataObject":
-        {
-            "end_epoch":1526652235,
-            "name":"DASH-Venezuela-13-cities-1600-people",
-            "payment_address":"Xfm6qvS2ugxL9u1V64SQeqbztYjqNU1qqx",
-            "payment_amount":337,
-            "start_epoch":1524076755,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DASH-Venezuela-13-cities-1600-people"
-        },
-        "CreationTime":1523910440,
-        "FundingResult":
-        {
-            "AbsoluteYesCount":60,
-            "YesCount":89,
-            "NoCount":29,
-            "AbstainCount":0
-        },
-        "ValidResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        },
-        "DeleteResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        },
-        "EndorsedResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        }
-    }
-]
-```
-
-```php
-<?php
-$URL = "https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/getproposal/<PROPOSAL_HASH>?token=<TOKEN>";
-
-$aHTTP['http']['method']  = 'GET';
-
-$aHTTP['http']['header']  = "Content-Type: application/json\r\nAccept: application/json\r\n";
-
-$context = stream_context_create($aHTTP);
-
-$response = file_get_contents($URL, false, $context);
-
-// Response example
-[
-    {
-        "Hash":"83b86bb19438144468576a257e312e5e674e778a47990c6af6338a3f92536302",
-        "CollateralHash":"329f3802ebdad3088668f837ad74ab22e8853c03bf2ed15440d4108115d531b8",
-        "DataHex":"5b5b2270726f706f73616c222c7b22656e645f65706f6368223a313532363635323233352c226e616d65223a22444153482d56656e657a75656c612d31332d6369746965732d313630302d70656f706c65222c227061796d656e745f61646472657373223a2258666d36717653327567784c39753156363453516571627a74596a714e5531717178222c227061796d656e745f616d6f756e74223a3333372c2273746172745f65706f6368223a313532343037363735352c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472616c2e6f72672f702f444153482d56656e657a75656c612d31332d6369746965732d313630302d70656f706c65227d5d5d",
-        "DataObject":
-        {
-            "end_epoch":1526652235,
-            "name":"DASH-Venezuela-13-cities-1600-people",
-            "payment_address":"Xfm6qvS2ugxL9u1V64SQeqbztYjqNU1qqx",
-            "payment_amount":337,
-            "start_epoch":1524076755,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DASH-Venezuela-13-cities-1600-people"
-        },
-        "CreationTime":1523910440,
-        "FundingResult":
-        {
-            "AbsoluteYesCount":60,
-            "YesCount":89,
-            "NoCount":29,
-            "AbstainCount":0
-        },
-        "ValidResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        },
-        "DeleteResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        },
-        "EndorsedResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        }
-    }
-]
-?>
-```
-
-```javascript
-var headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json'
-};
-
-$.ajax({
-  url: 'https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/getproposal/<PROPOSAL_HASH>?token=<TOKEN>',
-  method: 'get',
-  headers: headers,
-  success: function(data) {
-    console.log(JSON.stringify(data));
-  }
-});
-
-// Response example
-[
-    {
-        "Hash":"83b86bb19438144468576a257e312e5e674e778a47990c6af6338a3f92536302",
-        "CollateralHash":"329f3802ebdad3088668f837ad74ab22e8853c03bf2ed15440d4108115d531b8",
-        "DataHex":"5b5b2270726f706f73616c222c7b22656e645f65706f6368223a313532363635323233352c226e616d65223a22444153482d56656e657a75656c612d31332d6369746965732d313630302d70656f706c65222c227061796d656e745f61646472657373223a2258666d36717653327567784c39753156363453516571627a74596a714e5531717178222c227061796d656e745f616d6f756e74223a3333372c2273746172745f65706f6368223a313532343037363735352c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472616c2e6f72672f702f444153482d56656e657a75656c612d31332d6369746965732d313630302d70656f706c65227d5d5d",
-        "DataObject":
-        {
-            "end_epoch":1526652235,
-            "name":"DASH-Venezuela-13-cities-1600-people",
-            "payment_address":"Xfm6qvS2ugxL9u1V64SQeqbztYjqNU1qqx",
-            "payment_amount":337,
-            "start_epoch":1524076755,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DASH-Venezuela-13-cities-1600-people"
-        },
-        "CreationTime":1523910440,
-        "FundingResult":
-        {
-            "AbsoluteYesCount":60,
-            "YesCount":89,
-            "NoCount":29,
-            "AbstainCount":0
-        },
-        "ValidResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        },
-        "DeleteResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        },
-        "EndorsedResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        }
-    }
-]
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json'
-}
-
-result = RestClient.get 'https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/getproposal/<PROPOSAL_HASH>',
-         params: {'token': <TOKEN>}, headers: headers
-
-p JSON.parse(result)
-
-# Response example
-[
-    {
-        "Hash":"83b86bb19438144468576a257e312e5e674e778a47990c6af6338a3f92536302",
-        "CollateralHash":"329f3802ebdad3088668f837ad74ab22e8853c03bf2ed15440d4108115d531b8",
-        "DataHex":"5b5b2270726f706f73616c222c7b22656e645f65706f6368223a313532363635323233352c226e616d65223a22444153482d56656e657a75656c612d31332d6369746965732d313630302d70656f706c65222c227061796d656e745f61646472657373223a2258666d36717653327567784c39753156363453516571627a74596a714e5531717178222c227061796d656e745f616d6f756e74223a3333372c2273746172745f65706f6368223a313532343037363735352c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472616c2e6f72672f702f444153482d56656e657a75656c612d31332d6369746965732d313630302d70656f706c65227d5d5d",
-        "DataObject":
-        {
-            "end_epoch":1526652235,
-            "name":"DASH-Venezuela-13-cities-1600-people",
-            "payment_address":"Xfm6qvS2ugxL9u1V64SQeqbztYjqNU1qqx",
-            "payment_amount":337,
-            "start_epoch":1524076755,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DASH-Venezuela-13-cities-1600-people"
-        },
-        "CreationTime":1523910440,
-        "FundingResult":
-        {
-            "AbsoluteYesCount":60,
-            "YesCount":89,
-            "NoCount":29,
-            "AbstainCount":0
-        },
-        "ValidResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        },
-        "DeleteResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        },
-        "EndorsedResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        }
-    }
-]
-```
-
-```python
-import requests
-
-headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-}
-
-r = requests.get('https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/getproposal/<PROPOSAL_HASH>',
-                  params={'token': <TOKEN>}, headers = headers)
-
-print r.json()
-
-# Response example
-[
-    {
-        "Hash":"83b86bb19438144468576a257e312e5e674e778a47990c6af6338a3f92536302",
-        "CollateralHash":"329f3802ebdad3088668f837ad74ab22e8853c03bf2ed15440d4108115d531b8",
-        "DataHex":"5b5b2270726f706f73616c222c7b22656e645f65706f6368223a313532363635323233352c226e616d65223a22444153482d56656e657a75656c612d31332d6369746965732d313630302d70656f706c65222c227061796d656e745f61646472657373223a2258666d36717653327567784c39753156363453516571627a74596a714e5531717178222c227061796d656e745f616d6f756e74223a3333372c2273746172745f65706f6368223a313532343037363735352c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472616c2e6f72672f702f444153482d56656e657a75656c612d31332d6369746965732d313630302d70656f706c65227d5d5d",
-        "DataObject":
-        {
-            "end_epoch":1526652235,
-            "name":"DASH-Venezuela-13-cities-1600-people",
-            "payment_address":"Xfm6qvS2ugxL9u1V64SQeqbztYjqNU1qqx",
-            "payment_amount":337,
-            "start_epoch":1524076755,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DASH-Venezuela-13-cities-1600-people"
-        },
-        "CreationTime":1523910440,
-        "FundingResult":
-        {
-            "AbsoluteYesCount":60,
-            "YesCount":89,
-            "NoCount":29,
-            "AbstainCount":0
-        },
-        "ValidResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        },
-        "DeleteResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        },
-        "EndorsedResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        }
-    }
-]
-```
-
-```java
-URL obj = new URL("https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/getproposal/<PROPOSAL_HASH>?token=<TOKEN>");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestProperty("Accept", "application/json");
-con.setRequestProperty("Content-Type", "application/json");
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-
-// Response example
-[
-    {
-        "Hash":"83b86bb19438144468576a257e312e5e674e778a47990c6af6338a3f92536302",
-        "CollateralHash":"329f3802ebdad3088668f837ad74ab22e8853c03bf2ed15440d4108115d531b8",
-        "DataHex":"5b5b2270726f706f73616c222c7b22656e645f65706f6368223a313532363635323233352c226e616d65223a22444153482d56656e657a75656c612d31332d6369746965732d313630302d70656f706c65222c227061796d656e745f61646472657373223a2258666d36717653327567784c39753156363453516571627a74596a714e5531717178222c227061796d656e745f616d6f756e74223a3333372c2273746172745f65706f6368223a313532343037363735352c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472616c2e6f72672f702f444153482d56656e657a75656c612d31332d6369746965732d313630302d70656f706c65227d5d5d",
-        "DataObject":
-        {
-            "end_epoch":1526652235,
-            "name":"DASH-Venezuela-13-cities-1600-people",
-            "payment_address":"Xfm6qvS2ugxL9u1V64SQeqbztYjqNU1qqx",
-            "payment_amount":337,
-            "start_epoch":1524076755,
-            "type":1,
-            "url":"https://www.dashcentral.org/p/DASH-Venezuela-13-cities-1600-people"
-        },
-        "CreationTime":1523910440,
-        "FundingResult":
-        {
-            "AbsoluteYesCount":60,
-            "YesCount":89,
-            "NoCount":29,
-            "AbstainCount":0
-        },
-        "ValidResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        },
-        "DeleteResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        },
-        "EndorsedResult":
-        {
-            "AbsoluteYesCount":0,
-            "YesCount":0,
-            "NoCount":0,
-            "AbstainCount":0
-        }
-    }
-]
 ```

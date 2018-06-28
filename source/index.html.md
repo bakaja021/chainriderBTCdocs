@@ -1,5 +1,5 @@
 ---
-title: ChainRider API Documentation
+title: ChainRider BTC API Documentation
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
