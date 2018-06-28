@@ -74,7 +74,7 @@
 |proxy|String|Proxy used for connecting|
 |difficulty|Float|Current mining difficulty|
 |testnet|Boolean|Is it the testnet version of the blockchain|
-|relayfee|Float|Minimum relay fee in DASH|
+|relayfee|Float|Minimum relay fee in BTC|
 |errors|String|Error description|
 |network|String|Blockchain type ENUM {"livenet", "testnet"}|
 
@@ -453,9 +453,9 @@
 |confirmations|Integer|Number of confirmations|
 |time|Integer|Timestamp of the transaction since epoch|
 |blocktime|Integer|Block timestamp since epoch|
-|valueOut|Float|Output Value in DASH|
+|valueOut|Float|Output Value in BTC|
 |size|Integer|Size of the tx in bytes|
-|valueIn|Float|Input Value in DASH|
+|valueIn|Float|Input Value in BTC|
 |fees|Float|Network fee for the transaction|
 |isCoinBase|Boolean|Is the transaction general one created by miner/first in a block.|
 

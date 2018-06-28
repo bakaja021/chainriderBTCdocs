@@ -228,7 +228,7 @@ System.out.println(response.toString());
 
 <a id="opIdGetAddressBalanceByHash"></a>
 
-*Get Address balance in duffs*
+*Get Address balance in satoshis*
 
 |Parameter|In|Type|Required|Description|
 |---|---|---|---|---|
@@ -239,7 +239,7 @@ System.out.println(response.toString());
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|Integer representing balance in duffs|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|Integer representing balance in satoshis|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
 |403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|Forbidden|None|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
@@ -350,7 +350,7 @@ System.out.println(response.toString());
 
 <a id="opIdGetAddressTotalReceivedByHash"></a>
 
-*Get Total Received amount in duffs for an Address*
+*Get Total Received amount in satoshis for an Address*
 
 |Parameter|In|Type|Required|Description|
 |---|---|---|---|---|
@@ -361,7 +361,7 @@ System.out.println(response.toString());
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|Integer representing total received amount in duffs|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|Integer representing total received amount in satoshis|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
 |403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|Forbidden|None|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
@@ -472,7 +472,7 @@ System.out.println(response.toString());
 
 <a id="opIdGetAddressTotalSentByHash"></a>
 
-*Get Total Sent amount in duffs for an Address*
+*Get Total Sent amount in satoshis for an Address*
 
 |Parameter|In|Type|Required|Description|
 |---|---|---|---|---|
@@ -483,7 +483,7 @@ System.out.println(response.toString());
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|Integer representing total sent amount in duffs|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|Integer representing total sent amount in satoshis|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
 |403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|Forbidden|None|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
@@ -605,7 +605,7 @@ System.out.println(response.toString());
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|Integer representing unconfirmed balance in duffs|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|Integer representing unconfirmed balance in satoshis|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|None|
 |403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|Forbidden|None|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
