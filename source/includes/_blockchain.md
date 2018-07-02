@@ -36,20 +36,18 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/status?
 
 # Response example
 {
-    "info":
-    {
-        "version":120203,
-        "insightversion":"0.6.0",
-        "protocolversion":70208,
-        "blocks":894442,
-        "timeoffset":0,
-        "connections":8,
-        "proxy":"",
-        "difficulty":91708039.52534924,
-        "testnet":false,
-        "relayfee":0.00001,
-        "errors":"",
-        "network":"livenet"
+    "info": {
+        "version": 120100,
+        "protocolversion": 70012,
+        "blocks": 429075,
+        "timeoffset": -1,
+        "connections": 8,
+        "proxy": "",
+        "difficulty": 220755908330.3723,
+        "testnet": false,
+        "relayfee": 0.00001,
+        "errors": "",
+        "network": "livenet"
     }
 }
 ```
@@ -68,20 +66,18 @@ $response = file_get_contents($URL, false, $context);
 
 // Response example
 {
-    "info":
-    {
-        "version":120203,
-        "insightversion":"0.6.0",
-        "protocolversion":70208,
-        "blocks":894442,
-        "timeoffset":0,
-        "connections":8,
-        "proxy":"",
-        "difficulty":91708039.52534924,
-        "testnet":false,
-        "relayfee":0.00001,
-        "errors":"",
-        "network":"livenet"
+    "info": {
+        "version": 120100,
+        "protocolversion": 70012,
+        "blocks": 429075,
+        "timeoffset": -1,
+        "connections": 8,
+        "proxy": "",
+        "difficulty": 220755908330.3723,
+        "testnet": false,
+        "relayfee": 0.00001,
+        "errors": "",
+        "network": "livenet"
     }
 }
 ?>
@@ -104,20 +100,18 @@ $.ajax({
 
 // Response example
 {
-    "info":
-    {
-        "version":120203,
-        "insightversion":"0.6.0",
-        "protocolversion":70208,
-        "blocks":894442,
-        "timeoffset":0,
-        "connections":8,
-        "proxy":"",
-        "difficulty":91708039.52534924,
-        "testnet":false,
-        "relayfee":0.00001,
-        "errors":"",
-        "network":"livenet"
+    "info": {
+        "version": 120100,
+        "protocolversion": 70012,
+        "blocks": 429075,
+        "timeoffset": -1,
+        "connections": 8,
+        "proxy": "",
+        "difficulty": 220755908330.3723,
+        "testnet": false,
+        "relayfee": 0.00001,
+        "errors": "",
+        "network": "livenet"
     }
 }
 ```
@@ -138,20 +132,18 @@ p JSON.parse(result)
 
 # Response example
 {
-    "info":
-    {
-        "version":120203,
-        "insightversion":"0.6.0",
-        "protocolversion":70208,
-        "blocks":894442,
-        "timeoffset":0,
-        "connections":8,
-        "proxy":"",
-        "difficulty":91708039.52534924,
-        "testnet":false,
-        "relayfee":0.00001,
-        "errors":"",
-        "network":"livenet"
+    "info": {
+        "version": 120100,
+        "protocolversion": 70012,
+        "blocks": 429075,
+        "timeoffset": -1,
+        "connections": 8,
+        "proxy": "",
+        "difficulty": 220755908330.3723,
+        "testnet": false,
+        "relayfee": 0.00001,
+        "errors": "",
+        "network": "livenet"
     }
 }
 ```
@@ -171,20 +163,18 @@ print r.json()
 
 # Response example
 {
-    "info":
-    {
-        "version":120203,
-        "insightversion":"0.6.0",
-        "protocolversion":70208,
-        "blocks":894442,
-        "timeoffset":0,
-        "connections":8,
-        "proxy":"",
-        "difficulty":91708039.52534924,
-        "testnet":false,
-        "relayfee":0.00001,
-        "errors":"",
-        "network":"livenet"
+    "info": {
+        "version": 120100,
+        "protocolversion": 70012,
+        "blocks": 429075,
+        "timeoffset": -1,
+        "connections": 8,
+        "proxy": "",
+        "difficulty": 220755908330.3723,
+        "testnet": false,
+        "relayfee": 0.00001,
+        "errors": "",
+        "network": "livenet"
     }
 }
 ```
@@ -208,20 +198,18 @@ System.out.println(response.toString());
 
 // Response example
 {
-    "info":
-    {
-        "version":120203,
-        "insightversion":"0.6.0",
-        "protocolversion":70208,
-        "blocks":894442,
-        "timeoffset":0,
-        "connections":8,
-        "proxy":"",
-        "difficulty":91708039.52534924,
-        "testnet":false,
-        "relayfee":0.00001,
-        "errors":"",
-        "network":"livenet"
+    "info": {
+        "version": 120100,
+        "protocolversion": 70012,
+        "blocks": 429075,
+        "timeoffset": -1,
+        "connections": 8,
+        "proxy": "",
+        "difficulty": 220755908330.3723,
+        "testnet": false,
+        "relayfee": 0.00001,
+        "errors": "",
+        "network": "livenet"
     }
 }
 ```
@@ -260,7 +248,7 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/status?
 
 # Response example
 {
-    "difficulty":91708039.52534924
+    "difficulty":220755908330.3723
 }
 ```
 
@@ -278,7 +266,7 @@ $response = file_get_contents($URL, false, $context);
 
 // Response example
 {
-    "difficulty":91708039.52534924
+    "difficulty":220755908330.3723
 }
 ?>
 ```
@@ -300,7 +288,7 @@ $.ajax({
 
 // Response example
 {
-    "difficulty":91708039.52534924
+    "difficulty":220755908330.3723
 }
 ```
 
@@ -320,7 +308,7 @@ p JSON.parse(result)
 
 # Response example
 {
-    "difficulty":91708039.52534924
+    "difficulty":220755908330.3723
 }
 ```
 
@@ -339,7 +327,7 @@ print r.json()
 
 # Response example
 {
-    "difficulty":91708039.52534924
+    "difficulty":220755908330.3723
 }
 ```
 
@@ -362,7 +350,7 @@ System.out.println(response.toString());
 
 // Response example
 {
-    "difficulty":91708039.52534924
+    "difficulty":220755908330.3723
 }
 ```
 
@@ -399,7 +387,7 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/status?
 
 # Response example
 {
-    "bestblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
+    "bestblockhash":"0000000000000000007b026006bb0dea1d41bd24a7b29359a349d1b7ab6e1112"
 }
 ```
 
@@ -417,7 +405,7 @@ $response = file_get_contents($URL, false, $context);
 
 // Response example
 {
-    "bestblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
+    "bestblockhash":"0000000000000000007b026006bb0dea1d41bd24a7b29359a349d1b7ab6e1112"
 }
 ?>
 ```
@@ -439,7 +427,7 @@ $.ajax({
 
 // Response example
 {
-    "bestblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
+    "bestblockhash":"0000000000000000007b026006bb0dea1d41bd24a7b29359a349d1b7ab6e1112"
 }
 ```
 
@@ -459,7 +447,7 @@ p JSON.parse(result)
 
 # Response example
 {
-    "bestblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
+    "bestblockhash":"0000000000000000007b026006bb0dea1d41bd24a7b29359a349d1b7ab6e1112"
 }
 ```
 
@@ -478,7 +466,7 @@ print r.json()
 
 # Response example
 {
-    "bestblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
+    "bestblockhash":"0000000000000000007b026006bb0dea1d41bd24a7b29359a349d1b7ab6e1112"
 }
 ```
 
@@ -501,7 +489,7 @@ System.out.println(response.toString());
 
 // Response example
 {
-    "bestblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
+    "bestblockhash":"0000000000000000007b026006bb0dea1d41bd24a7b29359a349d1b7ab6e1112"
 }
 ```
 
@@ -538,8 +526,8 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/status?
 
 # Response example
 {
-    "syncTipHash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595",
-    "lastblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
+    "syncTipHash": "0000000000000000001f97796c5cbab89170840a2081929ce48ecd83e2299507",
+    "lastblockhash": "0000000000000000001f97796c5cbab89170840a2081929ce48ecd83e2299507"
 }
 ```
 
@@ -557,8 +545,8 @@ $response = file_get_contents($URL, false, $context);
 
 // Response example
 {
-    "syncTipHash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595",
-    "lastblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
+    "syncTipHash": "0000000000000000001f97796c5cbab89170840a2081929ce48ecd83e2299507",
+    "lastblockhash": "0000000000000000001f97796c5cbab89170840a2081929ce48ecd83e2299507"
 }
 ?>
 ```
@@ -580,8 +568,8 @@ $.ajax({
 
 // Response example
 {
-    "syncTipHash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595",
-    "lastblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
+    "syncTipHash": "0000000000000000001f97796c5cbab89170840a2081929ce48ecd83e2299507",
+    "lastblockhash": "0000000000000000001f97796c5cbab89170840a2081929ce48ecd83e2299507"
 }
 ```
 
@@ -601,8 +589,8 @@ p JSON.parse(result)
 
 # Response example
 {
-    "syncTipHash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595",
-    "lastblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
+    "syncTipHash": "0000000000000000001f97796c5cbab89170840a2081929ce48ecd83e2299507",
+    "lastblockhash": "0000000000000000001f97796c5cbab89170840a2081929ce48ecd83e2299507"
 }
 ```
 
@@ -621,8 +609,8 @@ print r.json()
 
 # Response example
 {
-    "syncTipHash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595",
-    "lastblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
+    "syncTipHash": "0000000000000000001f97796c5cbab89170840a2081929ce48ecd83e2299507",
+    "lastblockhash": "0000000000000000001f97796c5cbab89170840a2081929ce48ecd83e2299507"
 }
 ```
 
@@ -645,8 +633,8 @@ System.out.println(response.toString());
 
 // Response example
 {
-    "syncTipHash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595",
-    "lastblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
+    "syncTipHash": "0000000000000000001f97796c5cbab89170840a2081929ce48ecd83e2299507",
+    "lastblockhash": "0000000000000000001f97796c5cbab89170840a2081929ce48ecd83e2299507"
 }
 ```
 
@@ -682,12 +670,12 @@ curl -X GET https://api.chainrider.io/v1/<DIGITAL_CURRENCY>/<BLOCKCHAIN>/sync?to
 
 # Response example
 {
-    "status":"finished",
-    "blockChainHeight":894442,
-    "syncPercentage":100,
-    "height":894442,
-    "error":null,
-    "type":"bitcore node"
+    "status": "syncing",
+    "blockChainHeight": 429072,
+    "syncPercentage": 76,
+    "height": 429072,
+    "error": null,
+    "type": "bitcore node"
 }
 ```
 
@@ -705,12 +693,12 @@ $response = file_get_contents($URL, false, $context);
 
 // Response example
 {
-    "status":"finished",
-    "blockChainHeight":894442,
-    "syncPercentage":100,
-    "height":894442,
-    "error":null,
-    "type":"bitcore node"
+    "status": "syncing",
+    "blockChainHeight": 429072,
+    "syncPercentage": 76,
+    "height": 429072,
+    "error": null,
+    "type": "bitcore node"
 }
 ?>
 ```
@@ -732,12 +720,12 @@ $.ajax({
 
 // Response example
 {
-    "status":"finished",
-    "blockChainHeight":894442,
-    "syncPercentage":100,
-    "height":894442,
-    "error":null,
-    "type":"bitcore node"
+    "status": "syncing",
+    "blockChainHeight": 429072,
+    "syncPercentage": 76,
+    "height": 429072,
+    "error": null,
+    "type": "bitcore node"
 }
 ```
 
@@ -757,12 +745,12 @@ p JSON.parse(result)
 
 # Response example
 {
-    "status":"finished",
-    "blockChainHeight":894442,
-    "syncPercentage":100,
-    "height":894442,
-    "error":null,
-    "type":"bitcore node"
+    "status": "syncing",
+    "blockChainHeight": 429072,
+    "syncPercentage": 76,
+    "height": 429072,
+    "error": null,
+    "type": "bitcore node"
 }
 ```
 
@@ -781,12 +769,12 @@ print r.json()
 
 # Response example
 {
-    "status":"finished",
-    "blockChainHeight":894442,
-    "syncPercentage":100,
-    "height":894442,
-    "error":null,
-    "type":"bitcore node"
+    "status": "syncing",
+    "blockChainHeight": 429072,
+    "syncPercentage": 76,
+    "height": 429072,
+    "error": null,
+    "type": "bitcore node"
 }
 ```
 
@@ -809,11 +797,11 @@ System.out.println(response.toString());
 
 // Response example
 {
-    "status":"finished",
-    "blockChainHeight":894442,
-    "syncPercentage":100,
-    "height":894442,
-    "error":null,
-    "type":"bitcore node"
+    "status": "syncing",
+    "blockChainHeight": 429072,
+    "syncPercentage": 76,
+    "height": 429072,
+    "error": null,
+    "type": "bitcore node"
 }
 ```

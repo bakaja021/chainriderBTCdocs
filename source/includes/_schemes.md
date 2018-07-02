@@ -84,20 +84,18 @@
 
 ```json
 {
-    "info":
-    {
-        "version":120203,
-        "insightversion":"0.6.0",
-        "protocolversion":70208,
-        "blocks":894442,
-        "timeoffset":0,
-        "connections":8,
-        "proxy":"",
-        "difficulty":91708039.52534924,
-        "testnet":false,
-        "relayfee":0.00001,
-        "errors":"",
-        "network":"livenet"
+    "info": {
+        "version": 120100,
+        "protocolversion": 70012,
+        "blocks": 429075,
+        "timeoffset": -1,
+        "connections": 8,
+        "proxy": "",
+        "difficulty": 220755908330.3723,
+        "testnet": false,
+        "relayfee": 0.00001,
+        "errors": "",
+        "network": "livenet"
     }
 }
 ```
@@ -116,7 +114,7 @@
 
 ```json
 {
-    "difficulty":91708039.52534924
+    "difficulty":220755908330.3723
 }
 ```
 
@@ -134,7 +132,7 @@
 
 ```json
 {
-    "bestblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
+    "bestblockhash":"0000000000000000007b026006bb0dea1d41bd24a7b29359a349d1b7ab6e1112"
 }
 ```
 
@@ -153,8 +151,8 @@
 
 ```json
 {
-    "syncTipHash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595",
-    "lastblockhash":"00000000000000188d9e69d1db6f8a03361785b3eab26baa349223c8192d5595"
+    "syncTipHash": "0000000000000000001f97796c5cbab89170840a2081929ce48ecd83e2299507",
+    "lastblockhash": "0000000000000000001f97796c5cbab89170840a2081929ce48ecd83e2299507"
 }
 ```
 
@@ -177,12 +175,12 @@
 
 ```json
 {
-    "status":"finished",
-    "blockChainHeight":894442,
-    "syncPercentage":100,
-    "height":894442,
-    "error":null,
-    "type":"bitcore node"
+    "status": "syncing",
+    "blockChainHeight": 429072,
+    "syncPercentage": 76,
+    "height": 429072,
+    "error": null,
+    "type": "bitcore node"
 }
 ```
 
@@ -667,8 +665,45 @@
 
 ```json
 {
-    "pagesTotal": 1,
+    "pagesTotal": 3,
     "txs": [
+        {
+            "txid": "d614b789a22074c328e94f9fae7c1d9c56728bbdf5de614b0e34ae0d9339ca52",
+            "version": 1,
+            "locktime": 0,
+            "vin": [
+                {
+                    "coinbase": "03b7da0402e004062f503253482f",
+                    "sequence": 4294967295,
+                    "n": 0
+                }
+            ],
+            "vout": [
+                {
+                    "value": "25.00121110",
+                    "n": 0,
+                    "scriptPubKey": {
+                        "hex": "2103bf79df816d4016d9982f71c2783deb22750389c74a7e458bd192faa8b77937f2ac",
+                        "asm": "03bf79df816d4016d9982f71c2783deb22750389c74a7e458bd192faa8b77937f2 OP_CHECKSIG",
+                        "addresses": [
+                            "mohFBEun8ojXxQNLNJYZELjCyYVyYv2x4n"
+                        ],
+                        "type": "pubkeyhash"
+                    },
+                    "spentTxId": "f2dfc507329a0a4c7eac2bc4ab9d4b3f1525169c8c9ea59d529e131f4f4930e2",
+                    "spentIndex": 178,
+                    "spentHeight": 318556
+                }
+            ],
+            "blockhash": "000000004da178abfd3798dcaa3111c2e145d654fad364bd20214cef9f80ab6e",
+            "blockheight": 318135,
+            "confirmations": 1030747,
+            "time": 1421145649,
+            "blocktime": 1421145649,
+            "isCoinBase": true,
+            "valueOut": 25.0012111,
+            "size": 109
+        },
         {
             "txid": "8ac4006d584b3a5302811b454f04a965d617520d9edcd02f5fc5d5c2d181766d",
             "version": 1,
@@ -723,7 +758,7 @@
             ],
             "blockhash": "000000004da178abfd3798dcaa3111c2e145d654fad364bd20214cef9f80ab6e",
             "blockheight": 318135,
-            "confirmations": 1022347,
+            "confirmations": 1030747,
             "time": 1421145649,
             "blocktime": 1421145649,
             "valueOut": 46.57657,
